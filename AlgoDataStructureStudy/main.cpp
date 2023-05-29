@@ -1,55 +1,69 @@
 #include <iostream>
+#include <string>
+#include <algorithm>
+
 using namespace std;
 
-//n단의 숫자 모래시계를 출력하는 프로그램 작성
+
+
+string DecimalConversion(int N, int K, string x);
+
 
 int main()
 {
-	int N;
-	cout << "몇 단? : ";
+	int N, K;
+	string src;
+	cout << "입력 데이터는 몇 진수 : ";
 	cin >> N;
-	int cnt = N;
-	int spaceCnt = 0;
-
-	for (int i = 0; i < N; i++)
+	cout << "값을 입력하시오: ";
+	cin >> src;
+	cin.ignore();
+	cout << "출력 데이터는 몇 진수: ";
+	cin >> K;
+	if (K < 1 || K>36)
 	{
-		for (int j = 0; j < spaceCnt; j++)
-		{
-			cout << " ";
-		}
-		for (int j = 0; j < cnt * 2 - 1; j++)
-		{
-			cout << i + 1;
-
-		}
-		for (int j = 0; j < spaceCnt; j++)
-		{
-			cout << " ";
-		}
-		cnt--;
-		spaceCnt++;
-		cout << endl;
+		cout << "잘못된 진수 입력입니다.\n";
+		exit(1);
 	}
-	cnt++;
-	spaceCnt-=2;
+	cout << N << "진수 " << src << "는 " << K << "진수로 " << DecimalConversion(N, K, src) << "입니다.\n";
+}
 
-	for (int i = N - 1; i > 0; i--)
+string DecimalConversion(int N, int K, string x)
+{
+	string answer = "";
+	string charArr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	//일단 10진수로 돌려놓자
+	int dec = 0;
+	int mul = 1;
+	bool emptyFlag = false;
+
+	while (!emptyFlag)
 	{
-		for (int j = 0; j < spaceCnt; j++)
+		for (int i = 0; i < charArr.size(); i++)
 		{
-			cout << " ";
+			if (x.empty())
+			{
+				emptyFlag = true;
+				break;
+			}
+			if (charArr[i] == x.back())
+			{
+				dec += i * mul;
+				mul *= N;
+				x.pop_back();
+
+			}
 		}
-		for (int j = 0; j < cnt * 2 + 1; j++)
-		{
-			cout << i;
-		}
-		for (int j = 0; j < spaceCnt; j++)
-		{
-			cout << " ";
-		}
-		cnt++;
-		spaceCnt--;
-		cout << endl;
 	}
-	return 0;
+	//바꾼 수를 원하는 진수로 돌려놓기
+
+	while (dec)
+	{
+		int temp = dec % K;
+		answer += charArr[temp];
+		dec /= K;
+	}
+	reverse(answer.begin(), answer.end());
+	return answer;
+
 }
