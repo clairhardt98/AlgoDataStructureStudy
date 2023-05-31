@@ -1,69 +1,143 @@
 #include <iostream>
-#include <string>
-#include <algorithm>
-
+#include <vector>
 using namespace std;
-
-
-
-string DecimalConversion(int N, int K, string x);
-
 
 int main()
 {
-	int N, K;
-	string src;
-	cout << "입력 데이터는 몇 진수 : ";
-	cin >> N;
-	cout << "값을 입력하시오: ";
-	cin >> src;
-	cin.ignore();
-	cout << "출력 데이터는 몇 진수: ";
-	cin >> K;
-	if (K < 1 || K>36)
+	string temp1 = "WBWBWBWB";
+	string temp2 = "BWBWBWBW";
+	vector<string> chess1;
+	vector<string> chess2;
+	for (int i = 0; i < 4; i++)
 	{
-		cout << "잘못된 진수 입력입니다.\n";
-		exit(1);
+		chess1.push_back(temp1);
+		chess1.push_back(temp2);
+		chess2.push_back(temp2);
+		chess2.push_back(temp1);
 	}
-	cout << N << "진수 " << src << "는 " << K << "진수로 " << DecimalConversion(N, K, src) << "입니다.\n";
-}
-
-string DecimalConversion(int N, int K, string x)
-{
-	string answer = "";
-	string charArr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	//일단 10진수로 돌려놓자
-	int dec = 0;
-	int mul = 1;
-	bool emptyFlag = false;
-
-	while (!emptyFlag)
+	
+	int N, M;
+	cin >> N >> M;
+	vector<string> board;
+	for (int i = 0; i < N; i++)
 	{
-		for (int i = 0; i < charArr.size(); i++)
+		string str;
+		cin >> str;
+		board.push_back(str);
+	}
+	
+	int cnt = 2500;
+	int tempcnt = 0;
+	for (int i = 0; i < N - 7; i++)
+	{
+		for (int j = 0; j < M - 7; j++)
 		{
-			if (x.empty())
+			for (int a = 0; a < 8; a++)
 			{
-				emptyFlag = true;
-				break;
+				for (int b = 0; b < 8; b++)
+				{
+					if (board[i + a][j + b] != chess1[a][b])
+					{
+;						tempcnt++;
+					}
+				}
 			}
-			if (charArr[i] == x.back())
-			{
-				dec += i * mul;
-				mul *= N;
-				x.pop_back();
-
-			}
+			if (tempcnt < cnt)
+				cnt = tempcnt;
 		}
 	}
-	//바꾼 수를 원하는 진수로 돌려놓기
 
-	while (dec)
+	for (int i = 0; i < N - 7; i++)
 	{
-		int temp = dec % K;
-		answer += charArr[temp];
-		dec /= K;
+		for (int j = 0; j < M - 7; j++)
+		{
+			for (int a = 0; a < 8; a++)
+			{
+				for (int b = 0; b < 8; b++)
+				{
+					if (board[i + a][j + b] != chess2[a][b])
+					{
+						tempcnt++;
+					}
+				}
+			}
+			if (tempcnt < cnt)
+				cnt = tempcnt;
+		}
 	}
-	reverse(answer.begin(), answer.end());
-	return answer;
 
+	
+
+	cout << cnt;
+}#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	string temp1 = "WBWBWBWB";
+	string temp2 = "BWBWBWBW";
+	vector<string> chess1;
+	vector<string> chess2;
+	for (int i = 0; i < 4; i++)
+	{
+		chess1.push_back(temp1);
+		chess1.push_back(temp2);
+		chess2.push_back(temp2);
+		chess2.push_back(temp1);
+	}
+	
+	int N, M;
+	cin >> N >> M;
+	vector<string> board;
+	for (int i = 0; i < N; i++)
+	{
+		string str;
+		cin >> str;
+		board.push_back(str);
+	}
+	
+	int cnt = 2500;
+	int tempcnt = 0;
+	for (int i = 0; i < N - 7; i++)
+	{
+		for (int j = 0; j < M - 7; j++)
+		{
+			for (int a = 0; a < 8; a++)
+			{
+				for (int b = 0; b < 8; b++)
+				{
+					if (board[i + a][j + b] != chess1[a][b])
+					{
+;						tempcnt++;
+					}
+				}
+			}
+			if (tempcnt < cnt)
+				cnt = tempcnt;
+		}
+	}
+
+	for (int i = 0; i < N - 7; i++)
+	{
+		for (int j = 0; j < M - 7; j++)
+		{
+			for (int a = 0; a < 8; a++)
+			{
+				for (int b = 0; b < 8; b++)
+				{
+					if (board[i + a][j + b] != chess2[a][b])
+					{
+						tempcnt++;
+					}
+				}
+			}
+			if (tempcnt < cnt)
+				cnt = tempcnt;
+		}
+	}
+
+	
+
+	cout << cnt;
 }
