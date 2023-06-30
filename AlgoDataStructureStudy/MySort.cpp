@@ -1,4 +1,5 @@
 #include "MySort.h"
+#include <iostream>
 
 void bubbleSort1(std::vector<int>& v)
 {
@@ -200,13 +201,52 @@ void QuickSort(std::vector<int>& v, int left, int right)
 		if (pl > pr)break;
 	}
 	if (pl < right)
-		QuickSort(v,pl,right);
+		QuickSort(v, pl, right);
 	if (pr > left)
-		QuickSort(v, left , pr);
+		QuickSort(v, left, pr);
 }
-std::vector<int> MergeSort(std::vector<int>& v, int start, int end)
+
+void MergeSort(std::vector<int>& v, int start, int end)
 {
+	using std::cout;
+	using std::endl;
+	
+	if (v.size() <= 1)return;
 	int center = (start + end) / 2;
+	
+	MergeSort(v, start, center);
+	MergeSort(v, center+1, end);
+	
+	int v1_idx = 0;
+	int v2_idx = 0;
+	std::vector<int> v3;
+	while (1)
+	{
+		if (v1_idx < v1.size() && v2_idx < v2.size())
+		{
+			if (v1[v1_idx] > v2[v2_idx])
+			{
+				v3.push_back(v2[v2_idx]);
+				v2_idx++;
+			}
+			else
+			{
+				v3.push_back(v1[v1_idx]);
+				v1_idx++;
+			}
+		}
+		else
+			break;
+	}
+	for (int i = v1_idx; i < v1.size(); i++)
+	{
+		v3.push_back(v1[i]);
+	}
+	for (int i = v2_idx; i < v2.size(); i++)
+	{
+		v3.push_back(v2[i]);
+	}
+	v = v3;
 }
 void Swap(int& a, int& b)
 {

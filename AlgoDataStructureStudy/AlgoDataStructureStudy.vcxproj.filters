@@ -72,6 +72,12 @@
     <ClCompile Include="useQuicksort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="useMergeSort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="김채연바보.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntQueue.h">

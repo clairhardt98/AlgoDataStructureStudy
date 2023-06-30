@@ -14,3 +14,4 @@ void SelectionSort2(std::vector<int>& v);
 void InsertionSort(std::vector<int>& v);
 void ShellSort(std::vector<int>& v);
 void QuickSort(std::vector<int>& v, int left, int right);
+void MergeSort(std::vector<int>& v, int, int);
