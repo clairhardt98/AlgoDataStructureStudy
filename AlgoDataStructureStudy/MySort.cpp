@@ -1,5 +1,4 @@
 #include "MySort.h"
-
 void bubbleSort1(std::vector<int>& v)
 {
 	compCnt = swapCnt = 0;
@@ -204,9 +203,57 @@ void QuickSort(std::vector<int>& v, int left, int right)
 	if (pr > left)
 		QuickSort(v, left , pr);
 }
-std::vector<int> MergeSort(std::vector<int>& v, int start, int end)
+
+void MergeSort(std::vector<int>& v, int left, int right)
 {
-	int center = (start + end) / 2;
+	int center = (left + right) / 2;
+	if (left < right)
+	{
+		MergeSort(v, left, center);
+		MergeSort(v, center + 1, right);
+		__merge(v, left, right);
+	}
+}
+void __merge(std::vector<int>& v, int left, int right)
+{
+	static std::vector<int> sortedArr(v.size());
+	
+	int center = (left + right) / 2;
+	int v1Idx = left;
+	int v2Idx = center + 1;
+	int sortedArrIdx = left;
+	while (v1Idx <= center && v2Idx <= right)
+	{
+		if (v[v1Idx] < v[v2Idx])
+		{
+			sortedArr[sortedArrIdx++] = v[v1Idx];
+			v1Idx++;
+		}
+		else
+		{
+			sortedArr[sortedArrIdx++] = v[v2Idx];
+			v2Idx++;
+		}
+	}
+	if (v1Idx > center)
+	{
+		for (int i = v2Idx; i <= right; i++)
+		{
+			sortedArr[sortedArrIdx++] = v[i];
+		}
+	}
+	else
+	{
+		for (int i = v1Idx; i <= center; i++)
+		{
+			sortedArr[sortedArrIdx++] = v[i];
+		}
+	}
+
+	for (int i = left; i <= right; i++)
+	{
+		v[i] = sortedArr[i];
+	}
 }
 void Swap(int& a, int& b)
 {
