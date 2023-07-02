@@ -37,23 +37,12 @@ string DecimalConversion(int N, int K, string x)
 	int mul = 1;
 	bool emptyFlag = false;
 
-	while (!emptyFlag)
+	while (!x.empty())
 	{
-		for (int i = 0; i < charArr.size(); i++)
-		{
-			if (x.empty())
-			{
-				emptyFlag = true;
-				break;
-			}
-			if (charArr[i] == x.back())
-			{
-				dec += i * mul;
-				mul *= N;
-				x.pop_back();
-
-			}
-		}
+		int temp = x.back() - '0';
+		dec += temp * mul;
+		x.pop_back();
+		mul *= N;
 	}
 	//바꾼 수를 원하는 진수로 돌려놓기
 
