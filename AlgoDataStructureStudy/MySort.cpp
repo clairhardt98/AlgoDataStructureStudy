@@ -203,7 +203,6 @@ void QuickSort(std::vector<int>& v, int left, int right)
 	if (pr > left)
 		QuickSort(v, left , pr);
 }
-
 void MergeSort(std::vector<int>& v, int left, int right)
 {
 	int center = (left + right) / 2;
@@ -253,6 +252,36 @@ void __merge(std::vector<int>& v, int left, int right)
 	for (int i = left; i <= right; i++)
 	{
 		v[i] = sortedArr[i];
+	}
+}
+void HeapSort(std::vector<int>& v)
+{
+	compCnt = swapCnt = 0;
+	MaxHeap(v, v.size() - 1);
+	for (int i = 1; i < v.size(); i++)
+	{
+		swapCnt++;
+		Swap(v[0], v[v.size() - i]);
+		MaxHeap(v, v.size() - i - 1);
+	}
+}
+void MaxHeap(std::vector<int>& v, int end)
+{
+	
+	for (int i = 1; i <= end; i++)
+	{
+		//노드를 차례대로 진행
+		int temp = i;
+		do {
+			int parent = (temp-1) / 2;//그 노드의 부모를 구하고 부모보다 크면 swap
+			compCnt++;
+			if (v[parent] < v[temp])
+			{
+				swapCnt++;
+				Swap(v[parent], v[temp]);
+			}
+			temp = parent;//부모를 기준으로 그 부모를 찾아가서 반복
+		} while (temp != 0);
 	}
 }
 void Swap(int& a, int& b)

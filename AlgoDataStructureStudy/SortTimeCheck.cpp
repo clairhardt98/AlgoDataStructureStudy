@@ -11,7 +11,7 @@ int main()
 	vector<int> v = { 7,4,3,9,8,1,2,5,6 };
 	Stopwatch sw;
 
-	cout << "BubbleSort1 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "BubbleSort1 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -19,10 +19,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "BubbleSort2 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "BubbleSort2 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -30,10 +30,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "BubbleSort3 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "BubbleSort3 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -41,10 +41,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "SelectionSort1 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "SelectionSort1 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -52,10 +52,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "SelectionSort2 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "SelectionSort2 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -63,10 +63,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "InsertionSort 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "InsertionSort 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -74,10 +74,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "ShellSort 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "ShellSort 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -85,10 +85,10 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
 
-	cout << "QuickSort 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "QuickSort 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -97,9 +97,9 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "ºñ±³ È½¼ö: " << compCnt << " ±³È¯ È½¼ö: " << swapCnt << endl;
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
-	cout << "MergeSort 100000È¸ ¹Ýº¹ ½Ã°£ ÃøÁ¤)" << endl;
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "MergeSort 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
 	sw.start();
 	for (int i = 0; i < 100000; i++)
 	{
@@ -107,5 +107,16 @@ int main()
 		v = { 7,4,3,9,8,1,2,5,6 };
 	}
 	sw.stop();
-	cout << "°É¸° ½Ã°£ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "HeapSort 100000íšŒ ë°˜ë³µ ì‹œê°„ ì¸¡ì •)" << endl;
+	sw.start();
+	for (int i = 0; i < 100000; i++)
+	{
+		HeapSort(v);
+		v = { 7,4,3,9,8,1,2,5,6 };
+	}
+	sw.stop();
+	cout << "ë¹„êµ íšŸìˆ˜: " << compCnt << " êµí™˜ íšŸìˆ˜: " << swapCnt << endl;
+	cout << "ê±¸ë¦° ì‹œê°„ : " << sw.getElapsedTime() << "ms" << endl;
+
 }
