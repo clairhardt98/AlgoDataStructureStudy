@@ -189,7 +189,6 @@
     <ClCompile Include="useStopwatch.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="김채연바보.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="charQueue.h">
