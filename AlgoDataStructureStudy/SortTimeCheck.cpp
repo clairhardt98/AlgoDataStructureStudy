@@ -118,5 +118,15 @@ int main()
 	sw.stop();
 	cout << "비교 횟수: " << compCnt << " 교환 횟수: " << swapCnt << endl;
 	cout << "걸린 시간 : " << sw.getElapsedTime() << "ms" << endl;
+	cout << "FreqSort 100000회 반복 시간 측정)" << endl;
+	sw.start();
+	for (int i = 0; i < 100000; i++)
+	{
+		FreqSort(v);
+		v = { 7,4,3,9,8,1,2,5,6 };
+	}
+	sw.stop();
+	//cout << "비교 횟수: " << compCnt << " 교환 횟수: " << swapCnt << endl;
+	cout << "걸린 시간 : " << sw.getElapsedTime() << "ms" << endl;
 
 }

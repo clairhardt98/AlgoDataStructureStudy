@@ -18,3 +18,4 @@ void QuickSort(std::vector<int>& v, int left, int right);
 void MergeSort(std::vector<int>& v, int left, int right);
 void HeapSort(std::vector<int>& v);
 void MaxHeap(std::vector<int>& v, int end);
+void FreqSort(std::vector<int>& v);
