@@ -3,7 +3,6 @@
 StudentList::StudentList()
 {
 	head = nullptr;
-	count = 0;
 }
 
 void StudentList::Insert(std::string name, int no)
@@ -23,7 +22,6 @@ void StudentList::Insert(std::string name, int no)
 		}
 		temp->next = newSt;
 	}
-	count++;
 }
 
 void StudentList::Delete(int no)

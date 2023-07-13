@@ -11,7 +11,6 @@ struct Student
 class StudentList
 {
 private:
-	int count;
 	Student* head;
 public:
 	StudentList();
