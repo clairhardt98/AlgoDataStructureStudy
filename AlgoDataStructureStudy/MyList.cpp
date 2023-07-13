@@ -1,4 +1,4 @@
-癤�#include "MyList.h"
+#include "MyList.h"
 
 StudentList::StudentList()
 {
@@ -28,22 +28,27 @@ void StudentList::Insert(std::string name, int no)
 
 void StudentList::Delete(int no)
 {
+	//아무것도 없을 때
 	if (head == nullptr)return;
+	//맨 앞이 찾는 노드일 때
+	if (head->no == no)
+	{
+		Student* temp = head->next;
+		delete head;
+		head = temp;
+		return;
+	}
 	Student* ref = head;
 	Student* remove = head;
-	while (remove!=nullptr)
+	while (ref->next->no != no)
 	{
-		if (ref->no == no)
-		{
-			remove = remove->next;
-			ref->next = remove->next;
-			delete remove;
-			count--;
-			break;
-		}
-		remove = remove->next;
+		if (ref->next == nullptr)return;
 		ref = ref->next;
 	}
+	remove = ref->next;
+	ref->next = remove->next;
+	delete remove;
+	
 }
 
 void StudentList::Print()
@@ -57,3 +62,19 @@ void StudentList::Print()
 		temp = temp->next;
 	}
 }
+
+void StudentList::Clear()
+{
+	if (head == nullptr)return;
+	Student* temp = head->next;
+	while (1)
+	{
+		delete head;
+		head = temp;
+		if (head == nullptr)
+			break;
+		temp = head->next;
+	}
+}
+
+

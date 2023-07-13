@@ -8,7 +8,7 @@ int main()
 	int sel;
 	while (1)
 	{
-		cout << "1. ìž…ë ¥, 2. ì‚­ì œ, 3. ì „ì²´ ì¶œë ¥ : ";
+		cout << "1. ÀÔ·Â, 2. »èÁ¦, 3. ÀüÃ¼ Ãâ·Â, 4. ÃÊ±âÈ­ : ";
 		cin >> sel;
 		switch (sel)
 		{
@@ -16,9 +16,9 @@ int main()
 		{
 			string name;
 			int no;
-			cout << "ì´ë¦„ : ";
+			cout << "ÀÌ¸§ : ";
 			cin >> name;
-			cout << "ë²ˆí˜¸ : ";
+			cout << "¹øÈ£ : ";
 			cin >> no;
 			list.Insert(name, no);
 		}
@@ -26,13 +26,16 @@ int main()
 		case 2:
 		{
 			int no;
-			cout << "ë²ˆí˜¸ : ";
+			cout << "¹øÈ£ : ";
 			cin >> no;
 			list.Delete(no);
 		}
 			break;
 		case 3:
 			list.Print();
+			break;
+		case 4:
+			list.Clear();
 			break;
 		default:
 			continue;

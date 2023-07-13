@@ -15,10 +15,11 @@ private:
 	Student* head;
 public:
 	StudentList();
-	
+	~StudentList() { Clear(); }
 	void Insert(std::string name, int no);
 	void Delete(int no);
 	void Print();
+	void Clear();
 };
 //학생 관리 구조체 생성 : 번호 및 이름 포함
 //구조체 리스트 만들고
