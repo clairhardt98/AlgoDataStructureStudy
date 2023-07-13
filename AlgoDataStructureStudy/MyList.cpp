@@ -11,12 +11,13 @@ void StudentList::Insert(std::string name, int no)
 	Student* newSt = new Student;
 	newSt->name = name;
 	newSt->no = no;
+	newSt->next = nullptr;
 	if (head == nullptr)
 		head = newSt;
 	else
 	{
 		Student* temp = head;
-		while (temp->next == nullptr)
+		while (temp->next != nullptr)
 		{
 			temp = temp->next;
 		}
@@ -52,7 +53,7 @@ void StudentList::Print()
 	Student* temp = head;
 	while (temp != nullptr)
 	{
-		cout << "name: " << temp->name << " number : " << temp->no << endl;
+		cout << "name: " << temp->name << "\tnumber : " << temp->no << endl;
 		temp = temp->next;
 	}
 }
