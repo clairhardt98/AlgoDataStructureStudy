@@ -4,6 +4,7 @@
 using namespace std;
 std::vector<int> SetTable(std::string& word)
 {
+	//0~i까지의 부분 문자열 중에서 prefix == suffix가 될 수 있는 부분 문자열 중에서 가장 긴 것의 길이?????????
 	std::vector<int> temp(word.size());
 	temp[0] = -1;
 	int idx = 0;
@@ -12,7 +13,7 @@ std::vector<int> SetTable(std::string& word)
 	{
 		if (word[i] != word[idx])
 		{
-			temp[i] = cnt = 0;
+			temp[i] = cnt = temp[idx-1];
 		}
 		else
 		{
