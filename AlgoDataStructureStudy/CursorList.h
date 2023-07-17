@@ -18,7 +18,8 @@ class List
 {
 private:
 	Node* n;
-	vector<int> free;
+	int* free;
+	int freeIdx;
 	int head;
 	int last;
 	int cur;
@@ -29,9 +30,8 @@ public:
 	~List();
 public:
 public:
-	void Insert(const Student& _st);
-	void Remove(int no);
+	bool Insert(const Student _st);
+	bool Remove(int no);
 	void Clear();
 	void Print();
-
 };
