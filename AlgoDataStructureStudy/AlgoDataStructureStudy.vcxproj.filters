@@ -99,6 +99,12 @@
     <ClCompile Include="16916.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CursorList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="useCursorList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntQueue.h">
@@ -120,6 +126,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="MyList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
