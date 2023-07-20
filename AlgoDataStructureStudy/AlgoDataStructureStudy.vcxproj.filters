@@ -105,6 +105,15 @@
     <ClCompile Include="useCursorList.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MyDoubleList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="useDoubleList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTree.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntQueue.h">
@@ -129,6 +138,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CursorList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDoubleList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
