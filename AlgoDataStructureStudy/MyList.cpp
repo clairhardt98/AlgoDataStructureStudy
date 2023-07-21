@@ -54,11 +54,14 @@ void StudentList::Print()
 	using std::cout;
 	using std::endl;
 	Student* temp = head;
+	//cout << "->";
 	while (temp != nullptr)
 	{
-		cout << "name: " << temp->name << "\tnumber : " << temp->no << endl;
+		cout << "->";
+		cout << temp->no << "(" << temp->name << ")";
 		temp = temp->next;
 	}
+	cout << endl;
 }
 
 void StudentList::Clear()
