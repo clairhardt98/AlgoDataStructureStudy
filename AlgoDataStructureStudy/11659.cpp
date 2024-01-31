@@ -4,23 +4,49 @@ using namespace std;
 
 int main()
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	int n, m;
-	cin >> n >> m;
+	struct node
+	{
+		int d;
+		vector<int> arr;
+		node(int d, vector<int> arr)
+			:d(d)
+		{
+			this->arr = move(arr);
+		}
 
-	vector<int> d;
-	d.push_back(0);
-	for (size_t i = 1; i <= n; i++)
+		bool operator<(const node& other) const
+		{
+			return d < other.d;
+		}
+	};
+	vector<node> dp(100001);
+
+	int n;
+	cin >> n;
+	dp[0] = node(0, {});
+	dp[1] = node(0, { 1 });
+	dp[2] = node(1, { 1,2 });
+	dp[3] = node(1, { 1,3 });
+
+
+	for (size_t i = 4; i <= n; i++)
 	{
-		int input;
-		cin >> input;
-		d.push_back(d.back() + input);
+		node temp1(INT_MAX, {});
+		node temp2(INT_MAX, {});
+		temp1 = (i % 3 == 0) ? dp[i / 3] : temp1;
+		temp2 = (i % 2 == 0) ? dp[i / 2] : temp2;
+
+
+		node temp3 = min(min(temp1, temp2), dp[i - 1]);
+		temp3.arr.push_back(i);
+		dp[i] = node(temp3.d + 1, temp3.arr);
+		
 	}
-	for (size_t i = 0; i < m; i++)
+
+	cout << dp[n].d<<'\n';
+	while (!dp[n].arr.empty())
 	{
-		int a, b;
-		cin >> a >> b;
-		cout << d[b] - d[a - 1] << '\n';
+		cout << dp[n].arr.back();
+		dp[n].arr.pop_back();
 	}
 }
