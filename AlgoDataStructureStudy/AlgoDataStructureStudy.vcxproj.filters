@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\acmicpc">
+      <UniqueIdentifier>{a9b492e1-3824-4df3-aaf3-12f3a3c968e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="useIntStack.c">
@@ -116,6 +119,9 @@
     </ClCompile>
     <ClCompile Include="useHashTable.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11659.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

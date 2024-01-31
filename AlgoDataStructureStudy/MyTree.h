@@ -33,5 +33,6 @@ public:
 	BST() { root = nullptr; };
 	~BST();
 	int insert(int _data);
+	int remove(int _data);
 	
 };

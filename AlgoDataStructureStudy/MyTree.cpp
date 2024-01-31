@@ -34,8 +34,14 @@ int BST::insert(int _data)
 
 			cur = cur->right;
 		}
+		//같은 값이 들어오면 그냥 리턴
 		else
 			return 0;
 	}
 
+}
+
+int BST::remove(int _data)
+{
+	return 0;
 }
