@@ -123,6 +123,15 @@
     <ClCompile Include="11659.cpp">
       <Filter>소스 파일\acmicpc</Filter>
     </ClCompile>
+    <ClCompile Include="test1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="12852.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
+    </ClCompile>
+    <ClCompile Include="11047.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntQueue.h">
