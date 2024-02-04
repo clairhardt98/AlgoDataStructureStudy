@@ -132,6 +132,15 @@
     <ClCompile Include="11047.cpp">
       <Filter>소스 파일\acmicpc</Filter>
     </ClCompile>
+    <ClCompile Include="2217.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
+    </ClCompile>
+    <ClCompile Include="1026.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
+    </ClCompile>
+    <ClCompile Include="12865.cpp">
+      <Filter>소스 파일\acmicpc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntQueue.h">
